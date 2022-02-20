@@ -29,7 +29,7 @@ export class DataStorageService {
   fetchRecipes() {
     return this.http
       .get<Recipe[]>(
-        'https://ng-recipe-book-2a6f9-default-rtdb.europe-west1.firebasedatabase.app/recipes.json'
+        'https://ng-recipe-book-2a6f9-default-rtdb.europe-west1.firebasedatabase.app/recipes.json',
       )
       .pipe(
         map(recipes => {
