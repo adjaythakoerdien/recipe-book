@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit, OnDestroy{
   private userSub: Subscription;
 
 
-  constructor(
+constructor(
     private dataStorageService: DataStorageService,
     private authService: AuthService) {}
 
@@ -22,6 +22,10 @@ export class HeaderComponent implements OnInit, OnDestroy{
           this.isAuthenticated = !!user;
         });
       
+  }
+
+  onLogout() {
+    this.authService.logout();
   }
 
   collapsed = true;
